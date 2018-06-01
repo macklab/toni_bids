@@ -1,0 +1,65 @@
+
+{
+    "descriptions": [
+        {
+            "dataType": "anat",
+            "modalityLabel": "T1w",
+            "criteria": {
+                "SeriesDescription": "t1_mprage*"
+            }
+        },
+        {
+            "dataType": "anat",
+            "modalityLabel": "T2w",
+            "criteria": {
+                "SeriesDescription": "t2_tse_cor*"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "magnitude1",
+            "criteria": {
+                "SeriesDescription": "gre_field_mapping*",
+                "EchoTime": 0.00492
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "magnitude2",
+            "criteria": {
+                "SeriesDescription": "gre_field_mapping*",
+                "EchoTime": 0.00738,
+                "ImageType": "M"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "phasediff",
+            "EchoTime1": 0.00492,
+            "EchoTime2": 0.00738,
+            "criteria": {
+                "SeriesDescription": "gre_field_mapping*",
+                "EchoTime": 0.00738,
+                "ImageType": "P"
+            }
+        },
+        {
+            "dataType": "dwi",
+            "modalityLabel": "dwi",
+            "criteria": {
+                "SeriesDescription": "*_diff_*_sfs*",
+                "ImageType": "DIFFUSION",
+                "ImageType": "ORIGINAL"
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-learn",
+            "TaskName": "learn",
+            "criteria": {
+                "SidecarFilename": "*_bold_*"
+            }
+        }
+    ]
+}

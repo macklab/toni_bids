@@ -1,0 +1,10 @@
+{
+    "Authors": [
+        "Michael L. Mack"
+    ],
+    "Name": "ToNI Users meeting BIDS tutorial dataset",
+    "BIDSVersion": "1.0.2",
+    "ReferencesAndLinks": [
+        "http://github.com/macklab/toni_bids"
+    ],
+}
