@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# update to point to the location of the toni_bids directory
-bidsdir=/data/toni_bids
+# NOTE: change this to the absolute path of the toni_bids directory
+bidsdir=**CHANGEME**/toni_bids
 
 # convert dicoms to BIDS format dataset
 dcm2bids \
@@ -20,9 +20,9 @@ docker run -it --rm \
     --verbose-reports
 
 # run fmriprep
-#  note: a license file has to be provided to run freesurfer,
-#        download from freesurfer website and follow the fmriprep
-#        docs to run freesurfer as part of fmriprep
+#  note: A license file has to be provided to run freesurfer.
+#        Download from freesurfer website and follow the fmriprep
+#        docs to run freesurfer as part of fmriprep.
 docker run -it --rm \
     -v $bidsdir:/data:ro \
     -v $bidsdir/derivatives:/out \
